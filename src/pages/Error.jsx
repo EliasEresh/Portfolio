@@ -1,10 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import '..//style/index.css';
 
 function Error() {
     return (
-        <nav>
-           <p>404</p>
-        </nav>
+        <div className='error-main'>
+           <p className='error-display'>404</p>
+           <p className='error-message'>Oups!La page que vous demandez n'existe pas.</p>
+           <Link to="/" className="nav-link">Retourner sur la page d'accueil</Link>
+        </div>
     )
 }
 
