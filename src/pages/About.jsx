@@ -1,7 +1,7 @@
 import React from 'react';
 import '..//style/index.css';
-import imgabout from '../assets/imgabout.png';
 import Collapse from '../Collapse/collapse.jsx';
+import Banner from '..//components/banner/banner.jsx'
 
 export default function About() {
 
@@ -29,15 +29,13 @@ export default function About() {
 	]
 
 	return (
-			<div className='about-main'>
-            <img src={imgabout} alt="imgabout" className='image-about'/>
-				{aboutDatas.map(data => {
-					return (
-						<div key={data.id} className="about-main-collapse">
-							<Collapse style={{margin:'30px 0'}}  title={data.title} content={data.content} />
-						</div>
-					)}
-				)}
-			</div>
+		<div className="about-main">
+		<Banner />
+		{aboutDatas.map((data) => (
+		  <div key={data.id} className="about-main-collapse">
+			<Collapse style={{ margin: '30px 0' }} title={data.title} content={data.content} />
+		  </div>
+		))}
+	  </div>
 	)
 }

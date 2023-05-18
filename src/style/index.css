@@ -92,6 +92,14 @@ code {
   filter: brightness(0.7);
 }
 
+.banner-image-about {
+  width: 100%;
+  height: 223px;
+  border-radius: 25px;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
 .banner-text-container {
   position: absolute;
   top: 50%;
@@ -107,9 +115,177 @@ code {
   text-align: center;
 }
 
-/** Page d'Accueil**/
+/** Page d'Accueil **/
 
+/** Cartes **/
 
+.gallery-card {
+  position: relative;
+  width: 30%;
+  height: 340px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 50px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+}
+
+.card-title {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/** Gallerie **/
+
+.gallery-main {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  margin-bottom: 100px;
+  flex-wrap: wrap;
+  background-color: #F6F6F6;
+  width: 95%;
+  border-radius: 25px;
+  padding: 50px;
+}
+
+/** Accommodation **/
+
+/** Carrousel **/
+
+.slideshow {
+  display: flex;
+  position: relative;
+  width: 89%;
+  height: 415px;
+  margin: auto;
+  border-radius: 25px;
+  background-position: center;
+  background-size: cover;
+}
+
+.slideshow-arrow {
+  position: absolute;
+  top: 50%;
+  height: 15%;
+  cursor: pointer;
+}
+
+.slideshow-arrow-right {
+  right: 25px;
+}
+
+.slideshow-arrow-left {
+  left: 25px;
+}
+
+.slide-number {
+  position: absolute;
+  top: 82%;
+  left: 50%;
+  font-size: 18px;
+  font-weight: 500;
+  color: #FFFFFF;
+}
+
+/** Logements **/
+
+.accommodation {
+  width: 89%;
+  margin: auto;
+  margin-bottom: 70px;
+}
+
+.accommodation-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.accommodation-content-infos {
+  display: flex;
+  flex-direction: column;
+  color: #FF6060;
+  font-weight: 500;
+}
+
+.accommodation-content-title {
+  font-size: 36px;
+  font-weight: 500;;
+}
+
+.accommodation-content-location {
+  font-size: 18px;
+  margin: 0px 0px 30px 0px;
+}
+
+button {
+  display: inline;
+  padding: 5px 15px;
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  color: #FFFFFF;
+  background-color: #FF6060;
+  font-size: 14px;
+}
+
+.accommodation-content-host {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 11%;
+}
+
+.accommodation-content-host-display {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.accommodation-content-host-name {
+  align-self: center;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  color: #FF6060;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.accommodation-content-image {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+
+.accommodation-content-host-stars {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.accommodation-collapse {
+  display: flex;
+  justify-content: space-between;
+}
+
+.accommodation-collapse-block {
+  width: 47%;
+}
 
 /** A Propos**/
 
@@ -147,6 +323,10 @@ code {
   color: #FF6060;
   font-size: 24px;
   font-weight: 400;
+}
+
+.collapse-paragraph {
+  margin: 5px;
 }
 
 .arrow {
@@ -188,4 +368,19 @@ code {
   font-weight: 500;
   margin-top: 0px;
   margin-bottom: 182px;
+}
+
+@media screen and (max-width: 375px){
+ .gallery-main {
+  flex-direction: column;
+  padding: 5px;
+ }
+
+ .gallery-card {
+  width: 100%;
+ }
+
+ .footer-text {
+  font-size: 12px;
+ }
 }
