@@ -81,7 +81,7 @@ code {
   display: flex;
   justify-content: center;
   margin-top: 20px;
-  margin-bottom: 99px;
+  margin-bottom: 43px;
 }
 
 .banner-image {
@@ -245,13 +245,12 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 11%;
 }
 
 .accommodation-content-host-display {
   display: flex;
   align-items: flex-end;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 .accommodation-content-host-name {
@@ -270,6 +269,7 @@ button {
   object-fit: cover;
   object-position: center;
   border-radius: 50%;
+  margin-left: 15px;
 }
 
 .accommodation-content-host-stars {
@@ -317,6 +317,7 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 20px;
 }
 
 .collapse {
@@ -327,6 +328,7 @@ button {
 
 .collapse-paragraph {
   margin: 5px;
+  font-size: 18px;
 }
 
 .arrow {
@@ -370,17 +372,163 @@ button {
   margin-bottom: 182px;
 }
 
-@media screen and (max-width: 375px){
- .gallery-main {
-  flex-direction: column;
-  padding: 5px;
+#nav-return{
+  font-size: 18px;
+}
+
+/** Responsive **/
+
+@media screen and (max-width: 1080px){
+  .nav-links {
+    justify-content: flex-end;
+  }
+
+  .nav-link {
+    white-space: nowrap;
+    margin-left: 30px;
+  }
+
+  .error-display{
+    font-size: 150px;
+    margin-top: 90px;
+  }
+
+  .error-message{
+    font-size: 18px;
+  }
+
  }
+
+@media screen and (max-width: 640px){
+  .logo-title{
+    font-size: 50px;
+  }
+
+  .logo {
+    height: 28px;
+  }
+
+  .nav-bar {
+    margin: 0px 40px;
+  }
+
+  .nav-link {
+    font-size: 12px;
+    margin-left: 15px;
+  }
+
+  .banner-text{
+    font-size: 24px;
+    text-align: left;
+  }
+
+  .banner-image{
+    width: 95%;
+    height: 111px;
+  }
+
+ .gallery-main {
+    flex-direction: column;
+    padding: 0px;
+  }
 
  .gallery-card {
-  width: 100%;
- }
+    width: 100%;
+  }
 
- .footer-text {
-  font-size: 12px;
- }
+ .slideshow{
+    height: 255px;
+  }
+
+ .accommodation-content{
+    flex-direction: column;
+  }
+
+ .accommodation-content-infos{
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+ .accommodation-content-title{
+    font-size: 18px;
+  }
+
+ .accommodation-content-location{
+    font-size: 14px;
+  }
+
+ .accommodation-button{
+    font-size: 10px;
+    height: 18px;
+    border-radius: 5px;
+  }
+
+ .accommodation-content-host{
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+ .accommodation-content-image{
+    width: 32px;
+    height: 32px;
+  }
+
+ .accommodation-content-host-name {
+    font-size: 12px;
+  }
+
+ .accommodation-content-host-stars{
+    height: 13px;
+    gap: 7px;
+  }
+
+ .accommodation-collapse{
+    flex-direction: column;
+  }
+
+ .accommodation-collapse-block{
+    width: 100%;
+  }
+
+ .collapse-title{
+    margin-bottom: 10px;
+    font-size: 13px;
+  }
+
+ .collapse-paragraph {
+    font-size: 12px;
+  }
+
+  .about-main{
+    margin: 30px 20px 140px 20px;
+  }
+
+  .banner-image-about{
+    border-radius: 10px;
+  }
+
+  .about-main-collapse{
+    margin: 0;
+  }
+
+  .error-display{
+    font-size: 96px;
+    margin-top: 196px;
+    margin-bottom: 11px;
+  }
+
+  .error-message{
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 150px;
+  }
+
+  #nav-return{
+    font-size: 14px;
+  }
+
+  .footer-text {
+    font-size: 12px;
+  }
 }

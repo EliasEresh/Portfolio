@@ -5,25 +5,36 @@ import Collapse from '../Collapse/collapse.jsx';
 import data from '..//components/logements.json';
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 import emptyStar from '..//assets/emptystar.png';
 import fullStar from '..//assets/fullstar.png';
 
 export default function Accommodation({ accommodation }) {
+  const navigate = useNavigate();
+  const [imageSlider, setImageSlider] = useState([]);
 
-    const [imageSlider, setImageSlider] = useState([]);
+  const idAccommodation = useParams('id').id;
+  const dataCurrentAccommodation = data.filter(data => data.id === idAccommodation);
 
-	const idAccommodation = useParams('id').id;
-	const dataCurrentAccommodation = data.filter(data => data.id === idAccommodation);
-	
-	useEffect(() => {
-		const dataCurrentAccommodation = data.filter(data => data.id === idAccommodation);
-		setImageSlider(dataCurrentAccommodation[0].pictures);
-	}, [idAccommodation]);
+  useEffect(() => {
+    const filteredData = data.filter(data => data.id === idAccommodation);
 
-	const name = dataCurrentAccommodation[0].host.name.split(' '); 
-	const rating = dataCurrentAccommodation[0].rating;
-	const description  = dataCurrentAccommodation[0].description;
-	const equipments = dataCurrentAccommodation[0].equipments;
+    if (filteredData.length === 0) {
+      navigate('/error');
+      return;
+    }
+
+    setImageSlider(filteredData[0].pictures);
+  }, [idAccommodation, navigate]);
+
+  if (dataCurrentAccommodation.length === 0) {
+    return null;
+  }
+
+  const name = dataCurrentAccommodation[0].host.name.split(' ');
+  const rating = dataCurrentAccommodation[0].rating;
+  const description = dataCurrentAccommodation[0].description;
+  const equipments = dataCurrentAccommodation[0].equipments;
 
   return (
     <div>
@@ -36,7 +47,7 @@ export default function Accommodation({ accommodation }) {
 						<div>
 							{dataCurrentAccommodation[0].tags.map((tag, index) => {
 								return (
-									<button key={index}>{tag}</button>
+									<button key={index} className='accommodation-button'>{tag}</button>
 								)
 							})}
 						</div>

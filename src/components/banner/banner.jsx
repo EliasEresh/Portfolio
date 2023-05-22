@@ -8,7 +8,7 @@ export default function Banner() {
 
   return (
     <section className="banner">
-      {location.pathname === '/' ? (
+      {location.pathname === '/' ? ( //fallait utiliser une prop qui affiche l'image automatiquement et la change plutôt qu'une condition ternaire
         <div className="banner-image-container">
           <img className="banner-image" src={imgBanner} alt="Banner" />
           <div className="banner-text-container">

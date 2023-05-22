@@ -8,7 +8,7 @@ function Header() {
         <nav className='nav-bar'>
             <div>
                 <span className='logo-title'>K</span>
-                <img src={logo} alt="logo" />
+                <img src={logo} alt="logo" className='logo'/>
                 <span className='logo-title'>sa</span>
             </div>
             <div className='nav-links'>
