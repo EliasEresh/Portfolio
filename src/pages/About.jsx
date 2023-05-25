@@ -1,7 +1,7 @@
 import React from 'react';
-import '..//style/index.css';
-import Collapse from '../Collapse/collapse.jsx';
-import Banner from '..//components/banner/banner.jsx'
+import '../style/index.css';
+import Collapse from '../components/collapse/collapse.jsx';
+import Banner from '../components/banner/banner.jsx'
 
 export default function About() {
 

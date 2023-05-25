@@ -1,8 +1,8 @@
-import '..//style/index.css';
+import '../../style/index.css';
 
 import React, { useState } from 'react';
-import arrow from '..//assets/arrow.png';
-import arrowDown from '../assets/arrowdown.png';
+import arrow from '../../assets/arrow.png';
+import arrowDown from '../../assets/arrowdown.png';
 
 export default function Collapse({ title, content }) {
   const [toggle, setToggle] = useState(false);

@@ -1,13 +1,13 @@
 import React from 'react';
-import '..//style/index.css';
-import Slider from '..//components/slideshow/slideshow'
-import Collapse from '../Collapse/collapse.jsx';
-import data from '..//components/logements.json';
+import '../style/index.css';
+import Slider from '../components/slideshow/slideshow'
+import Collapse from '../components/collapse/collapse.jsx';
+import data from '../components/logements.json';
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
-import emptyStar from '..//assets/emptystar.png';
-import fullStar from '..//assets/fullstar.png';
+import emptyStar from '../assets/emptystar.png';
+import fullStar from '../assets/fullstar.png';
 
 export default function Accommodation({ accommodation }) {
   const navigate = useNavigate();

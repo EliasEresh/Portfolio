@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '..//style/index.css';
+import '../style/index.css';
 
 function Error() {
     return (
