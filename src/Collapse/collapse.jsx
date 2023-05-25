@@ -13,7 +13,7 @@ export default function Collapse({ title, content }) {
         {title}
         <img
           className="arrow"
-          src={toggle ? arrowDown : arrow}
+          src={toggle ? arrow : arrowDown}
           alt="show content"
         />
       </h3>
