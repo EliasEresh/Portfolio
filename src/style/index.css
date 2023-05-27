@@ -440,6 +440,10 @@ button {
     height: 255px;
   }
 
+  .slide-number{
+    display: none;
+  }
+
  .accommodation-content{
     flex-direction: column;
   }
