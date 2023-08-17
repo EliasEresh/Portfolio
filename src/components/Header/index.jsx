@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // Import the Link component
 import '../../style/index.css';
 import logo from '../../assets/logo-main.png';
- 
+
 function Header() {
     return (
         <nav className='nav-bar'>
@@ -10,13 +11,14 @@ function Header() {
                 <span className='logo-title'>Elias Eresh</span>
             </div>
             <div className='nav-links'>
-                <a href="#projects" className="nav-link">projets</a>
-                <a href="#skills" className="nav-link">Compétences</a>
-                <a href="#about" className="nav-link">A propos</a>
-                <a href="#footer" className="nav-link">Contact</a>
+                {/* Use the Link component for internal navigation */}
+                <Link to="/#projects" className="nav-link">projets</Link>
+                <Link to="/#skills" className="nav-link">Compétences</Link>
+                <Link to="/#about" className="nav-link">A propos</Link>
+                <Link to="/#footer" className="nav-link">Contact</Link>
             </div>
         </nav>
     )
 }
 
-export default Header
+export default Header;
