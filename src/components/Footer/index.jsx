@@ -1,16 +1,26 @@
 import React from 'react';
 import '../../style/index.css';
-import logo from '../../assets/logofooter.png';
+import linkedinLogo from '../../assets/linkedin-logo.png';
+import githubLogo from '../../assets/github-logo.png';
+import gmailLogo from '../../assets/gmail-logo.png';
 
 function Footer() {
   return (
-    <footer className='footer'>
-      <div>
-          <span className='logo-title-footer'>K</span>
-          <img src={logo} alt="logo" className='logo-footer'/>
-          <span className='logo-title-footer'>sa</span>
+    <footer id="footer" className='footer'>
+      <div className="contact-container">
+        <h3 className="footer-title">Contact</h3>
+        <div className="contact-links">
+          <a href="https://fr.linkedin.com/in/elias-lasrifi" target="_blank" rel="noopener noreferrer">
+            <img src={linkedinLogo} alt="LinkedIn" className='contact-logo'/>
+          </a>
+          <a href="https://github.com/EliasEresh" target="_blank" rel="noopener noreferrer">
+            <img src={githubLogo} alt="GitHub" className='contact-logo'/>
+          </a>
+          <a href="mailto:lasrifielias@gmail.com">
+            <img src={gmailLogo} alt="Gmail" className='contact-logo'/>
+          </a>
+        </div>
       </div>
-      <p className='footer-text'>© 2020 Kasa. All rights reserved</p>
     </footer>
   );
 }

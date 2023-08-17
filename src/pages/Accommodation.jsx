@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 import '../style/index.css';
 import Slider from '../components/slideshow/slideshow'
 import Collapse from '../components/collapse/collapse.jsx';
@@ -82,4 +82,4 @@ export default function Accommodation({ accommodation }) {
 			</main>
     </div>
   );
-}
+}*/

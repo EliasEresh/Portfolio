@@ -1,7 +1,7 @@
-import React from 'react';
+/**import React from 'react';
 import '../style/index.css';
 import Collapse from '../components/collapse/collapse.jsx';
-import Banner from '../components/banner/banner.jsx'
+import Banner from '../components/About/about.jsx'
 
 export default function About() {
 
@@ -38,4 +38,4 @@ export default function About() {
 		))}
 	  </div>
 	)
-}
+}**/

@@ -1,19 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import '../../style/index.css';
-import logo from '../../assets/logo.png';
+import logo from '../../assets/logo-main.png';
  
 function Header() {
     return (
         <nav className='nav-bar'>
-            <div>
-                <span className='logo-title'>K</span>
+            <div className='nav-bar-first'>
                 <img src={logo} alt="logo" className='logo'/>
-                <span className='logo-title'>sa</span>
+                <span className='logo-title'>Elias Eresh</span>
             </div>
             <div className='nav-links'>
-                <Link to="/" className="nav-link">Accueil</Link>
-                <Link to="/About" className="nav-link">A Propos</Link>
+                <a href="#projects" className="nav-link">projets</a>
+                <a href="#skills" className="nav-link">Compétences</a>
+                <a href="#about" className="nav-link">A propos</a>
+                <a href="#footer" className="nav-link">Contact</a>
             </div>
         </nav>
     )
